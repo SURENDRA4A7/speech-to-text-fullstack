@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/transcripts";
+const API_URL = "https://speech-to-text-fullstack.onrender.com/api/transcripts";
 
 // Save Transcript
 export const saveTranscript = async (transcript: string) => {
@@ -46,16 +46,13 @@ export const updateTranscript = async (
   id: number,
   transcript: string
 ) => {
-  const response = await fetch(
-    `http://localhost:5000/api/transcripts/${id}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ transcript }),
-    }
-  );
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ transcript }),
+  });
 
   if (!response.ok) {
     throw new Error("Failed to update transcript");
