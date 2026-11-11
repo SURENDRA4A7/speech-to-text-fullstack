@@ -134,3 +134,12 @@ Surendra Mangali
 - Responsive and Modern UI
 - Production Deployment using Vercel & Render
 - Portfolio & Interview Ready Project
+
+
+## Developer Contribution
+
+This project is maintained collaboratively.
+
+### Recent Improvements
+- Improved project documentation.
+- Added contributor information.
